@@ -212,7 +212,7 @@ describe('Bill with settings factory function' , function(){
             settingsBill.setCallCost(3.2)
             settingsBill.setSmsCost(1.5)
             settingsBill.setWarningLevel(5)
-            settingsBill.setCriticalLevel(10)
+            settingsBill.setCriticalLevel(10);
             
             settingsBill.makeCall()
             settingsBill.makeCall()
