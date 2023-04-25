@@ -4,9 +4,9 @@ describe('Calculate-bill factory function', function(){
     it('should be able to set the string bill', function(){
         let calculateBill = calculateBillWidget()
 
-        calculateBill.setStringBill('sms,call,sms,call')
+        calculateBill.setStringBill('sms,call,sms,call,call')
         calculateBill.convertStringBill()
-        assert.equal("sms,call,sms,call", calculateBill.getStringBill())
+        assert.equal("sms,call,sms,call,call", calculateBill.getStringBill())
     })
     it('should be able to convert sringbill to array ', function(){
         let calculateBill = calculateBillWidget()
