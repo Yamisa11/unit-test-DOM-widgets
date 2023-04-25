@@ -214,7 +214,6 @@ describe('Bill with settings factory function' , function(){
             settingsBill.setWarningLevel(5)
             settingsBill.setCriticalLevel(10)
             
-
             settingsBill.makeCall()
             settingsBill.makeCall()
             settingsBill.makeCall()
