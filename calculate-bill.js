@@ -9,7 +9,7 @@ function calculateBillWidget(){
     }
 
     function convertStringBill(){
-        stringBillArr = stringBill.split()
+        stringBillArr = stringBill.split(",")
     }
 
     function getStringBill(){
@@ -31,7 +31,15 @@ function calculateBillWidget(){
     function getBillTotalCost(){
         return billTotalCost;
     }
-
-    return {setStringBill,getStringBill,calculateBillTotalCost,getBillTotalCost,convertStringBill}
+ 
+    function totalClass() {
+        if (getBillTotalCost() >= 15) {
+          return "critical";
+        }
+        if (getBillTotalCost() >= 10) {
+          return "warning";
+        }
+      }
+    return {setStringBill,getStringBill,calculateBillTotalCost,getBillTotalCost,convertStringBill,totalClass}
 
 }
