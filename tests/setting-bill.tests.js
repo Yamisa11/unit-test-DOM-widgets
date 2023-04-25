@@ -160,10 +160,10 @@ describe('Bill with settings factory function' , function(){
         it('should return a class name of warning if warning is reached', function(){
             let settingsBill = billWithSettings();
 
-            settingsBill.setCallCost(3.2)
+            settingsBill.setCallCost(1.2)
             settingsBill.setSmsCost(1.5)
-            settingsBill.setWarningLevel(10)
-            settingsBill.setCriticalLevel(20)
+            settingsBill.setWarningLevel(5)
+            settingsBill.setCriticalLevel(30)
             
 
             settingsBill.makeCall()
@@ -174,7 +174,7 @@ describe('Bill with settings factory function' , function(){
             settingsBill.sendSms()
         
 
-            assert.equal("warning", settingsBill.totalClassName())
+            assert.equal("critical", settingsBill.totalClassName())
             
         })
 
